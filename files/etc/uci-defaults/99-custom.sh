@@ -44,9 +44,9 @@ elif [ "$count" -gt 1 ]; then
    echo "WAN interface disabled. Skipping WAN configuration." >> $LOGFILE
    # 设置LAN接口为静态IP
    uci set network.lan.proto='static'
-   uci set network.lan.ipaddr='192.168.3.100'
+   uci set network.lan.ipaddr='192.168.1.101'  # 修改为你想要的 IP 地址
    uci set network.lan.netmask='255.255.255.0'
-   echo "LAN interface set to static IP 192.168.3.100 at $(date)" >> $LOGFILE
+   echo "LAN interface set to static IP 192.168.1.101 at $(date)" >> $LOGFILE
    # 不再配置WAN接口的PPPoE设置
    uci delete network.wan
    uci delete network.wan6
